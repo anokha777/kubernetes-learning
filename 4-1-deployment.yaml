@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+spec:
+  minReadySeconds: 30
+  selector:
+    matchLabels:
+      myCustomLabelForServiceSelctor: webapp-deployment-selector
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        myCustomLabelForServiceSelctor: webapp-deployment-selector
+    spec:
+      containers:
+      - name: wepapp-container
+        image: richardchesterwood/k8s-fleetman-webapp-angular:release0

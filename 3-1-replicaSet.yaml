@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webapp-replicaset
+spec:
+  selector:
+    matchLabels:
+      myCustomLabelForServiceSelctor: webapp-replicaset-selector
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        myCustomLabelForServiceSelctor: webapp-replicaset-selector
+    spec:
+      containers:
+      - name: wepapp-container
+        image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
