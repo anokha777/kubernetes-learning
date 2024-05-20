@@ -32,19 +32,19 @@
 ## kubectl get nodes
 ## kubectl describe node <node name>
 
-### Mertices
+# Mertices
 ## kubectl top po
 ## kubectl top node
 
 
-### HPA
+# HPA
 ## kubectl autoscale deployment <deployment name> --cpu-percentage 400 --min 1 --max 4
 ## kubectl get hpa
 ## kubectl describe hpa <deployment name>
 ## kubectl describe hpa <deployment name> -o yaml 
 ## kubectl delete hpa <deployment name> 
 
-### curl in loop
+# curl in loop
 ## while true; do curl http://localhost:30080/api; echo; done
 
 ## kubectl get configMap 
